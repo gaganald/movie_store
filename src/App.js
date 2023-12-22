@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import MovieCard from "./Components/MovieCard";
 import { ImSearch } from "react-icons/im";
 
-// const api_url = "http://www.omdbapi.com/?i=tt3896198&apikey=678fd0a4";
+const api_url = "https://www.omdbapi.com/?i=tt3896198&apikey=678fd0a4";
 
 function App() {
   
@@ -12,7 +12,7 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   const searchMovie = async (title) => {
-    const response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=678fd0a4&s=${title}`);
+    const response = await fetch(`${api_url}&s=${title}`);
     const data = await response.json();
     // console.log(data)
     setMovies(data.Search);
