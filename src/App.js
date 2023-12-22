@@ -18,7 +18,7 @@ function App() {
     setMovies(data.Search);
   };
   useEffect(() => {
-    searchMovie("spiderman");
+    searchMovie("taj");
   }, []);
 
   return (
